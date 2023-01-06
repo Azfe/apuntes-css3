@@ -1,0 +1,45 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.layout{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+
+    border: 3px solid orangered;
+   
+    display: grid; /* Definir el contenedor de grid */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr 1fr || repeat(4, 1fr); */ /* Forma en fracciones para definir columnas */
+    grid-template-rows: 2fr 1.5fr 2fr;
+    grid-gap: 10px; /* Espacio entre elementos grid */
+    padding: 10px;
+}
+
+.layout .caja{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;    
+    background: gray;
+}
+
+.layout .red{
+    background: red;
+}
+
+.layout .blue{
+    background: blue;
+}
+
+.layout .green{
+    background: green;
+}
+
+.layout .purple{
+    background: purple;
+}
+
