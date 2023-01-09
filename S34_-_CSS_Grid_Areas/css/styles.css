@@ -11,7 +11,13 @@ body{
 #website{    
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 150px 70px 1fr 70px;    
+    grid-template-rows: 150px 70px 1fr 70px;
+    grid-template-areas: 
+        "header header header header header"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "footer footer footer footer footer"
+;
 
     width: 75%;
     height: 100vh;
@@ -25,6 +31,7 @@ body{
 
     display: flex;
 
+    grid-area: header;
     grid-column: 1 / 6;
 
     align-items: center;
@@ -32,6 +39,7 @@ body{
 }
 
 #menu{
+    grid-area: menu;
     grid-column: 1 / 6;
     background: lightblue;
     color: black;
@@ -46,6 +54,7 @@ body{
 }
 
 #contenido{
+    grid-area: contenido;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
@@ -62,12 +71,14 @@ body{
 }
 
 #lateral{
+    grid-area: lateral;
     grid-column: 5 / 6;
     background: orange;
     color: white;
 }
 
 #footer{
+    grid-area: footer;
     grid-column: 1 / 6;
     background: black;
     color: white;
